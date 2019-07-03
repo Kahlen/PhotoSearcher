@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PhotoSearcher</string>
+    <string name="search">Search</string>
+    <string name="error">Oops! Something went wrong.</string>
+</resources>

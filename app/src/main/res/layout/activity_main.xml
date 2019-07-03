@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.MainActivity">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/searchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/searchButton"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:text="@string/search"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_blue_light"
+                app:layout_constraintStart_toEndOf="@+id/searchEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/searchEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/searchEditText"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/photoList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchEditText"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/errorView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/error"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/photoList"
+                app:layout_constraintEnd_toEndOf="@+id/photoList"
+                app:layout_constraintTop_toTopOf="@+id/photoList"
+                app:layout_constraintBottom_toBottomOf="@+id/photoList"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
